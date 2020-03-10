@@ -24,9 +24,9 @@
     @include mq {
       flex-basis: 100px;
     }
-   &-link:hover {
-    color: #fff;
-    background-color: $light-green;
-   }
+    &:hover {
+      color: #fff;
+      background-color: $light-green;
+    }
   }
 }
