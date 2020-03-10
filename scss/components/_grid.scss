@@ -1,0 +1,64 @@
+/* ============================================= */
+/*              Grid System                      */
+/* ============================================= */
+
+.container {
+  padding: 0 10px;
+  @include mq {
+    max-width: 1400px;
+    @include center;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 10px;
+  @include mq {
+    flex-direction: row;
+  }
+}
+
+[class^=col] {
+  margin-top: 10px;
+  @include flex-basis;
+  min-height: 25px;
+  padding: 10px;
+  border-radius: 5px;
+  @include mq {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    align-items: center;
+  }
+}
+
+.card {
+  @include flex-basis;
+}
+
+// grid system loop
+@each $grid, $bg-color in $themes {
+   .column-#{$grid} {
+     background-color: $bg-color;
+  }
+}
+
+/* ============================================= */
+/*              Grid System media queries        */
+/* ============================================= */
+
+// grid system flex loop within mq
+@include mq {
+  @each $flexbox, $percentage in $flex {
+     .col-#{$flexbox} {
+       flex-basis: $percentage;
+    }
+  }
+  [class^=col] + [class^=col] {
+     margin-left: 10px;
+  }
+  .centered {
+     @include center;
+  }
+}

@@ -1,0 +1,19 @@
+// image position
+@mixin center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  @content;
+}
+
+// flex-basis
+@mixin flex-basis {
+  flex-basis: 100%;
+}
+
+// media query mixin
+@mixin mq {
+  @media (min-width: $break) {
+    @content;
+  }
+}

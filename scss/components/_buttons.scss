@@ -1,0 +1,38 @@
+/* ============================================= */
+/*              Buttons                          */
+/* ============================================= */
+
+.btn {
+  margin-top: 15px;
+  width: 100%;
+  color: #fff;
+  @extend %remove-borders;
+  padding: 10px 0;
+  text-transform: uppercase;
+  border-radius: 5px;
+  @include mq {
+    padding: 10px 30px;
+  }
+  &:hover {
+  @each $button, $background in $buttons {
+    &.btn-#{$button} {
+     background-color: lighten($background, 15%);
+     transition: 0.3s;
+    }
+   }
+  }
+}
+
+// buttons background-colors loop
+@each $button, $background in $buttons {
+   .btn-#{$button} {
+     background-color: $background;
+  }
+}
+
+// media query
+@include mq {
+  .btn + .btn {
+    margin-left: 10px;
+  }
+}
