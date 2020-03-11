@@ -39,7 +39,7 @@
 
 // grid system loop
 @each $grid, $bg-color in $themes {
-   .column-#{$grid} {
+   .theme.col-#{$grid} {
      background-color: $bg-color;
   }
 }
@@ -50,15 +50,21 @@
 
 // grid system flex loop within mq
 @include mq {
-  @each $flexbox, $percentage in $flex {
-     .col-#{$flexbox} {
-       flex-basis: $percentage;
-    }
+  .centered {
+     @include center;
+  }
+  [class^=col] {
+     display: flex;
+     justify-content: center;
+     margin-top: 0;
+     align-items: center;
   }
   [class^=col] + [class^=col] {
      margin-left: 10px;
   }
-  .centered {
-     @include center;
+  @each $flexbox, $percentage in $flex {
+     .theme.col-#{$flexbox} {
+       flex-basis: $percentage;
+    }
   }
 }
