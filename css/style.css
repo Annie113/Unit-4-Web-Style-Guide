@@ -650,51 +650,51 @@ a {
     margin-left: 10px;
   }
 
-  .theme.col-1 {
+  .col-1 {
     flex-basis: 8.33%;
   }
 
-  .theme.col-2 {
+  .col-2 {
     flex-basis: 16.67%;
   }
 
-  .theme.col-3 {
+  .col-3 {
     flex-basis: 25%;
   }
 
-  .theme.col-4 {
+  .col-4 {
     flex-basis: 33.33%;
   }
 
-  .theme.col-5 {
+  .col-5 {
     flex-basis: 41.67%;
   }
 
-  .theme.col-6 {
+  .col-6 {
     flex-basis: 50%;
   }
 
-  .theme.col-7 {
+  .col-7 {
     flex-basis: 58.33%;
   }
 
-  .theme.col-8 {
+  .col-8 {
     flex-basis: 66.67%;
   }
 
-  .theme.col-9 {
+  .col-9 {
     flex-basis: 75%;
   }
 
-  .theme.col-10 {
+  .col-10 {
     flex-basis: 83.33%;
   }
 
-  .theme.col-11 {
+  .col-11 {
     flex-basis: 91.67%;
   }
 
-  .theme.col-12 {
+  .col-12 {
     flex-basis: 100%;
   }
 }
