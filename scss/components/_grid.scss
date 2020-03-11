@@ -63,7 +63,7 @@
      margin-left: 10px;
   }
   @each $flexbox, $percentage in $flex {
-     .col-#{$flexbox} {
+     .theme.col-#{$flexbox} {
        flex-basis: $percentage;
     }
   }
